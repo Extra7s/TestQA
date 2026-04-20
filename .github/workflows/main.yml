@@ -19,7 +19,7 @@ jobs:
             - name: Install Playwright Browsers
               run: npx playwright install --with-deps
             - name: Run Playwright tests
-              run: npx playwright test tests/login.spec.js --project=chromium --headed
+              run: npx playwright test tests/login.spec.js --project chromium 
             - uses: actions/upload-artifact@v4
               if: always() # Ensure artifacts are uploaded even if tests fail
               with:
